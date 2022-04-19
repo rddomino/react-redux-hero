@@ -1,3 +1,5 @@
+import {heroesFetching, heroesFetched, heroesFetchingError} from '../components/heroesList/HeroesSlice';
+
 export const fetchHeroes = (request) => (dispatch) => {
     dispatch(heroesFetching());
         request("http://localhost:3001/heroes")
@@ -12,7 +14,7 @@ export const fetchFilters = (request) => (dispatch) => {
         .catch(() => dispatch(filtersFetchingError()))
 }
 
-export const heroesFetching = () => {
+/* export const heroesFetching = () => {
     return {
         type: 'HEROES_FETCHING'
     }
@@ -43,7 +45,7 @@ export const heroCreated = (newHero) => {
         type: 'HERO_CREATE',
         payload: newHero
     }
-}
+} */
 
 export const filtersFetching = () => {
     return {
